@@ -41,9 +41,11 @@ import static com.secuxtech.paymentdevicekit.PaymentPeripheralManager.SecuX_Peri
 
 ### Get ivKey
 
+Pair<Integer, String> doGetIVKey(Context context, int scanTimeout, String connectDeviceId, int checkRSSI, final int connectionTimeout) 
+
 ```java
 PaymentPeripheralManager peripheralManager = new PaymentPeripheralManager();
-Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 10000, devID, -80, 10000);
+Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 5);
 String ivKey = "";
 if (getIVKeyret.first == SecuX_Peripheral_Operation_OK) {
     ivKey = getIVKeyret.second;
@@ -53,6 +55,8 @@ if (getIVKeyret.first == SecuX_Peripheral_Operation_OK) {
 }
 ```
 ### Do payment
+
+Pair<Integer, String>  doPaymentVerification(byte[] encryptedTransactionData, MachineIoControlParam machineControlParam) 
 
 ```java
 Pair<Integer, String> ret = peripheralManager.doPaymentVerification(encryptedData, machineIoControlParam);

@@ -83,13 +83,13 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 PaymentPeripheralManager peripheralManager = new PaymentPeripheralManager();
                 //peripheralManager.doGetIVKey(mContext, 10000, "4ab10000726b", -80, 10000);
-                Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 10000, devID, -80, 10000);
+                Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 5);
                 String ivKey = "";
                 if (getIVKeyret.first == SecuX_Peripheral_Operation_OK) {
                     ivKey = getIVKeyret.second;
                     Log.i(TAG, "ivKey=" + ivKey);
                 } else {
-                    Log.i(TAG, "Get ivKey failed");
+                    Log.i(TAG, "Get ivKey failed! Error:  " + getIVKeyret.second);
 
                     return;
                 }
