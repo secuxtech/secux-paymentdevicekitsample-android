@@ -43,6 +43,13 @@ import static com.secuxtech.paymentdevicekit.PaymentPeripheralManager.SecuX_Peri
 
 Pair<Integer, String> doGetIVKey(Context context, int scanTimeout, String connectDeviceId, int checkRSSI, final int connectionTimeout) 
 
+Error message:
+
+Connect with device timeout
+Receive data timeout
+device is not activated
+Invalid peripheral ivkey
+
 ```java
 PaymentPeripheralManager peripheralManager = new PaymentPeripheralManager();
 Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 5);
@@ -57,6 +64,12 @@ if (getIVKeyret.first == SecuX_Peripheral_Operation_OK) {
 ### Do payment
 
 Pair<Integer, String>  doPaymentVerification(byte[] encryptedTransactionData, MachineIoControlParam machineControlParam) 
+
+Error message:
+
+Receive response from device timeout
+Invalid payment amount response from device
+Set payment io configuration failed
 
 ```java
 Pair<Integer, String> ret = peripheralManager.doPaymentVerification(encryptedData, machineIoControlParam);
