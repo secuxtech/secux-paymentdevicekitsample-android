@@ -1,5 +1,12 @@
 # SecuXPaymentDeviceKit Sample
 
+Shows a simple APP using the secux-paymentdevicekit.aar
+
+## Screenshot
+
+<p float="center">
+<img src="Screenshot/screenshot1.jpg" width="200">
+</p>
 
 ## SecuXPaymentDeviceKit Usage
 
