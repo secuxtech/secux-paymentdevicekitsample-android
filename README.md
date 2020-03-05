@@ -45,10 +45,10 @@ Pair<Integer, String> doGetIVKey(Context context, int scanTimeout, String connec
 
 Error message:
 
-Connect with device timeout
-Receive data timeout
-device is not activated
-Invalid peripheral ivkey
+* Connect with device timeout
+* Receive data timeout
+* device is not activated
+* Invalid peripheral ivkey
 
 ```java
 PaymentPeripheralManager peripheralManager = new PaymentPeripheralManager();
@@ -67,9 +67,9 @@ Pair<Integer, String>  doPaymentVerification(byte[] encryptedTransactionData, Ma
 
 Error message:
 
-Receive response from device timeout
-Invalid payment amount response from device
-Set payment io configuration failed
+* Receive response from device timeout
+* Invalid payment amount response from device
+* Set payment io configuration failed
 
 ```java
 Pair<Integer, String> ret = peripheralManager.doPaymentVerification(encryptedData, machineIoControlParam);
