@@ -60,7 +60,7 @@ Error message:
 
 ```java
 PaymentPeripheralManager peripheralManager = new PaymentPeripheralManager();
-Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 5);
+Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 15);
 String ivKey = "";
 if (getIVKeyret.first == SecuX_Peripheral_Operation_OK) {
     ivKey = getIVKeyret.second;
