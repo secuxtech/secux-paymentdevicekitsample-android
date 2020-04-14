@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 PaymentPeripheralManager peripheralManager = new PaymentPeripheralManager();
                 //peripheralManager.doGetIVKey(mContext, 10000, "4ab10000726b", -80, 10000);
-                Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 5);
+                Pair<Integer, String> getIVKeyret = peripheralManager.doGetIVKey(mContext, 5, devID, -80, 15);
                 String ivKey = "";
                 if (getIVKeyret.first == SecuX_Peripheral_Operation_OK) {
                     ivKey = getIVKeyret.second;
